@@ -1,0 +1,9 @@
+[Unit]
+Description=Rebind Capskey to ESC or CTRL
+After=local-fs.target
+
+[Service]
+ExecStart=/usr/bin/nice -n -20 /usr/bin/caps2esc
+
+[Install]
+WantedBy=multi-user.target
